@@ -1,0 +1,118 @@
+@use "../abstracts" as *;
+
+// colors
+.text-primary-heading {
+  color: $clr-primary-headings;
+}
+.text-primary-cta {
+  color: $clr-primary-cta-text;
+}
+.text-neutral-white {
+  color: $clr-neutral-white;
+}
+.text-neutral-body {
+  color: $clr-neutral-body;
+}
+.text-neutral-accent {
+  color: $clr-neutral-accent-text;
+}
+
+.bg-body-1 {
+  background-color: $clr-bg-body-1;
+}
+.bg-body-2 {
+  background-color: $clr-bg-body-2;
+}
+.bg-cta-hvr {
+  background-color: $clr-primary-cta-hvr-bg;
+}
+.bg-gradient-1 {
+  background-color: $clr-bg-gradient-1;
+}
+.bg-gradient-2 {
+  background-color: $clr-bg-gradient-2;
+}
+.bg-neutral-white {
+  background-color: $clr-neutral-white;
+}
+.bg-neutral-accent {
+  background-color: $clr-neutral-accent-bg;
+}
+
+// fonts
+.ff-primary {
+  font-family: $ff-primary;
+}
+.ff-secondary {
+  font-family: $ff-secondary;
+}
+
+.fs-xl {
+  font-size: $fs-xl;
+}
+.fs-lg {
+  font-size: $fs-lg;
+}
+.fs-md {
+  font-size: $fs-md;
+}
+.fs-sm {
+  font-size: $fs-sm;
+}
+
+.fw-bold {
+  font-weight: 700;
+}
+.fw-semibold {
+  font-weight: 600;
+}
+.fw-medium {
+  font-weight: 500;
+}
+.fw-regular {
+  font-weight: 400;
+}
+.fw-light {
+  font-weight: 300;
+}
+
+// layout
+
+.flex {
+  display: flex;
+}
+.grid {
+  display: grid;
+}
+.row {
+  flex-direction: row;
+}
+.column {
+  flex-direction: column;
+}
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center;
+}
+.space-between {
+  justify-content: space-between;
+}
+.g-1 {
+  gap: 0.5rem;
+}
+.g-2 {
+  gap: 1rem;
+}
+.g-3 {
+  gap: 2rem;
+}
+
+.open {
+  transform: none !important;
+}
+.active,
+.active + ul {
+  color: hsl(207, 13%, 45%);
+}

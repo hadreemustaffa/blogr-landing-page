@@ -1,0 +1,63 @@
+@use "../abstracts" as *;
+
+.btn {
+  outline: 1px solid transparent;
+  border: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: transparent;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: 2px solid $clr-neutral-accent-bg;
+  }
+}
+
+.btn-primary {
+  outline-offset: -1px;
+  color: $clr-primary-cta-text;
+  background-color: $clr-neutral-white;
+
+  &:hover {
+    color: $clr-neutral-white;
+    background-color: $clr-primary-cta-hvr-bg;
+  }
+}
+.btn-secondary {
+  outline-offset: -1px;
+  outline: 1px solid $clr-neutral-white;
+  color: $clr-neutral-white;
+
+  &:hover {
+    color: $clr-primary-cta-hvr-bg;
+    background-color: $clr-neutral-white;
+  }
+}
+
+.btn-tertiary {
+  padding: 0.5rem 2rem;
+  color: $clr-neutral-white;
+  background: linear-gradient(to right, $clr-bg-gradient-1, $clr-bg-gradient-2);
+
+  &:hover {
+    background: $clr-primary-cta-hvr-bg;
+  }
+}
+
+.btn-toggle {
+  padding: 0;
+  background-color: transparent;
+}
+
+nav {
+  button.btn {
+    border-radius: 0;
+
+    &:hover {
+      color: $clr-primary-cta-hvr-bg;
+    }
+  }
+}

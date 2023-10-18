@@ -1,0 +1,63 @@
+@use "../abstracts" as *;
+
+body {
+  font-family: $ff-primary;
+  font-weight: 300;
+  font-size: $fs-body-1;
+  color: $clr-neutral-body;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: $fs-heading-1;
+  color: $clr-neutral-white;
+}
+
+h2 {
+  font-weight: 600;
+  font-size: $fs-heading-2;
+  color: $clr-primary-headings;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+button {
+  font-weight: 600;
+}
+
+nav {
+  button {
+    color: $clr-bg-body-2;
+  }
+
+  .submenu {
+    & a:hover {
+      color: $clr-bg-body-2;
+      text-decoration: underline;
+    }
+  }
+}
+
+footer {
+  .list-container {
+    p {
+      color: $clr-neutral-white;
+      font-weight: 600;
+    }
+  }
+  a {
+    color: $clr-neutral-accent-text;
+    font-weight: 500;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.hero {
+  color: $clr-neutral-white;
+}

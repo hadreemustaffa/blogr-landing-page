@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "Overpass";
+  font-weight: 300;
+  src:
+    local("Overpass"),
+    url("./fonts/overpass/Overpass-Light.woff2") format("woff2"),
+    url("./fonts/overpass/Overpass-Light.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Overpass";
+  font-weight: 600;
+  src:
+    local("Overpass"),
+    url("./fonts/overpass/Overpass-SemiBold.woff2") format("woff2"),
+    url("./fonts/overpass/Overpass-SemiBold.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 400;
+  src:
+    local("Ubuntu"),
+    url("./fonts/ubuntu/ubuntu-regular-webfont.woff2") format("woff2"),
+    url("./fonts/ubuntu/ubuntu-regular-webfont.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 500;
+  src:
+    local("Ubuntu"),
+    url("./fonts/ubuntu/ubuntu-medium-webfont.woff2") format("woff2"),
+    url("./fonts/ubuntu/ubuntu-medium-webfont.woff") format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  src:
+    local("Ubuntu"),
+    url("./fonts/ubuntu/ubuntu-bold-webfont.woff2") format("woff2"),
+    url("./fonts/ubuntu/ubuntu-bold-webfont.woff") format("woff");
+  font-display: swap;
+}
