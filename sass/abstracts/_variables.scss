@@ -1,10 +1,10 @@
 $ff-primary: "Overpass", sans-serif;
 $ff-secondary: "Ubuntu", sans-serif;
 
-$fs-xl: 1.85rem;
-$fs-lg: 1.5rem;
+$fs-xl: clamp(1.75rem, 1.25rem + 2.5vw, 3.5rem);
+$fs-lg: clamp(1.5rem, 1.3214rem + 0.8929vw, 2.125rem);
 $fs-md: 1rem;
-$fs-sm: 0.75rem;
+$fs-sm: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
 
 $fw-bold: 700;
 $fw-semibold: 600;

@@ -61,3 +61,29 @@ footer {
 .hero {
   color: $clr-neutral-white;
 }
+
+@include lg {
+  nav {
+    button {
+      color: $clr-neutral-white;
+      opacity: 0.75;
+      &:hover {
+        color: $clr-neutral-white;
+        opacity: 1;
+        text-decoration: underline;
+      }
+    }
+
+    .submenu {
+      & a {
+        opacity: 0.85;
+        &:hover {
+          color: inherit;
+          opacity: 1;
+          font-weight: 700;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+}

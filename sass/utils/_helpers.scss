@@ -116,3 +116,13 @@
 .active + ul {
   color: hsl(207, 13%, 45%);
 }
+
+@include md {
+  .active {
+    color: $clr-neutral-white;
+    opacity: 1;
+  }
+  .active + ul {
+    color: $clr-neutral-accent-bg;
+  }
+}

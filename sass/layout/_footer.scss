@@ -16,13 +16,32 @@ footer {
 
   nav {
     padding-bottom: 2rem;
-  }
-
-  .list-container:not(:last-child) {
-    padding-bottom: 1.5rem;
 
     ul {
-      gap: 0.25rem;
+      margin: 0;
+    }
+  }
+
+  .list-container,
+  .list-container > p {
+    padding-bottom: 1.5rem;
+  }
+}
+
+@include lg {
+  footer {
+    padding: 4rem 10rem;
+    align-items: start;
+    text-align: left;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0;
+
+    .list-container ul {
+      gap: 1rem;
     }
   }
 }

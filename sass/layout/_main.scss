@@ -38,6 +38,7 @@ main {
 }
 
 .feature {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,6 +50,14 @@ main {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
+    &-text {
+      max-width: 60ch;
+    }
+
+    > div {
+      gap: 3rem;
+    }
   }
 
   &.two {
@@ -80,6 +89,49 @@ main {
     .feature__content {
       padding-top: 10rem;
       z-index: 2;
+    }
+  }
+}
+
+@include lg {
+  .hero {
+    &__img {
+      transform: scale(2.25) translate(11%, -8%);
+    }
+  }
+
+  .feature {
+    // position: relative;
+    &__content {
+      padding: 5rem;
+      flex-direction: row-reverse;
+
+      > div {
+        width: 50%;
+        text-align: left;
+      }
+      > picture {
+        position: absolute;
+        right: -22rem;
+        // transform: scale(0.85);
+        transition: all 0.25s ease;
+      }
+    }
+
+    &.one {
+      > .feature__content {
+        justify-content: start;
+      }
+    }
+  }
+}
+
+@include xl {
+  .feature {
+    &__content {
+      > picture {
+        right: -20rem;
+      }
     }
   }
 }

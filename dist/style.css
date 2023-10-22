@@ -125,13 +125,13 @@ body {
 
 h1 {
   font-weight: 700;
-  font-size: 1.85rem;
+  font-size: clamp(1.75rem, 1.25rem + 2.5vw, 3.5rem);
   color: hsl(0, 0%, 100%);
 }
 
 h2 {
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.3214rem + 0.8929vw, 2.125rem);
   color: hsl(208, 49%, 24%);
 }
 
@@ -169,6 +169,26 @@ footer a:hover {
   color: hsl(0, 0%, 100%);
 }
 
+@media (min-width: 62rem) {
+  nav button {
+    color: hsl(0, 0%, 100%);
+    opacity: 0.75;
+  }
+  nav button:hover {
+    color: hsl(0, 0%, 100%);
+    opacity: 1;
+    text-decoration: underline;
+  }
+  nav .submenu a {
+    opacity: 0.85;
+  }
+  nav .submenu a:hover {
+    color: inherit;
+    opacity: 1;
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
 .btn {
   outline: 1px solid transparent;
   border: transparent;
@@ -220,14 +240,22 @@ footer a:hover {
 nav button.btn {
   border-radius: 0;
 }
-nav button.btn:hover {
-  color: hsl(355, 100%, 74%);
-}
 
+@media (min-width: 48rem) {
+  .btn-tertiary {
+    color: hsl(356, 100%, 66%);
+    background: hsl(0, 0%, 100%);
+  }
+  .btn-tertiary:hover {
+    color: hsl(0, 0%, 100%);
+  }
+}
 body {
   display: flex;
   flex-direction: column;
   background-color: hsl(0, 0%, 100%);
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 header {
@@ -239,7 +267,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding: 3.125rem 1.5rem 1.5rem;
+  padding: 3.125rem 1.5rem 0;
   z-index: 50;
 }
 
@@ -281,6 +309,44 @@ nav li ul {
   display: none;
 }
 
+@media (min-width: 62rem) {
+  header {
+    justify-content: start;
+    padding: 3.125rem 8rem 0;
+  }
+  nav {
+    width: 100%;
+  }
+  nav .btn-toggle {
+    display: none;
+  }
+  nav ul .separator {
+    margin: 0;
+    margin-left: auto;
+    padding: 0 1rem 0 0;
+    border: none;
+  }
+  nav .main-menu {
+    width: 100%;
+    transform: none;
+    position: static;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0 0 0 2rem;
+    margin: 0;
+  }
+  nav li {
+    position: relative;
+  }
+  nav li ul {
+    position: absolute;
+    top: 3rem;
+    left: -3rem;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
@@ -319,6 +385,7 @@ main {
 }
 
 .feature {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -330,6 +397,12 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+}
+.feature__content-text {
+  max-width: 60ch;
+}
+.feature__content > div {
+  gap: 3rem;
 }
 .feature.two {
   border-radius: 0 5rem 0 5rem;
@@ -362,6 +435,32 @@ main {
   z-index: 2;
 }
 
+@media (min-width: 62rem) {
+  .hero__img {
+    transform: scale(2.25) translate(11%, -8%);
+  }
+  .feature__content {
+    padding: 5rem;
+    flex-direction: row-reverse;
+  }
+  .feature__content > div {
+    width: 50%;
+    text-align: left;
+  }
+  .feature__content > picture {
+    position: absolute;
+    right: -22rem;
+    transition: all 0.25s ease;
+  }
+  .feature.one > .feature__content {
+    justify-content: start;
+  }
+}
+@media (min-width: 78rem) {
+  .feature__content > picture {
+    right: -20rem;
+  }
+}
 footer {
   width: 100%;
   display: flex;
@@ -378,13 +477,30 @@ footer .logo {
 footer nav {
   padding-bottom: 2rem;
 }
-footer .list-container:not(:last-child) {
+footer nav ul {
+  margin: 0;
+}
+footer .list-container,
+footer .list-container > p {
   padding-bottom: 1.5rem;
 }
-footer .list-container:not(:last-child) ul {
-  gap: 0.25rem;
-}
 
+@media (min-width: 62rem) {
+  footer {
+    padding: 4rem 10rem;
+    align-items: start;
+    text-align: left;
+  }
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0;
+  }
+  nav .list-container ul {
+    gap: 1rem;
+  }
+}
 .text-primary-heading {
   color: hsl(208, 49%, 24%);
 }
@@ -442,11 +558,11 @@ footer .list-container:not(:last-child) ul {
 }
 
 .fs-xl {
-  font-size: 1.85rem;
+  font-size: clamp(1.75rem, 1.25rem + 2.5vw, 3.5rem);
 }
 
 .fs-lg {
-  font-size: 1.5rem;
+  font-size: clamp(1.5rem, 1.3214rem + 0.8929vw, 2.125rem);
 }
 
 .fs-md {
@@ -454,7 +570,7 @@ footer .list-container:not(:last-child) ul {
 }
 
 .fs-sm {
-  font-size: 0.75rem;
+  font-size: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
 }
 
 .fw-bold {
@@ -524,4 +640,14 @@ footer .list-container:not(:last-child) ul {
 .active,
 .active + ul {
   color: hsl(207, 13%, 45%);
+}
+
+@media (min-width: 48rem) {
+  .active {
+    color: hsl(0, 0%, 100%);
+    opacity: 1;
+  }
+  .active + ul {
+    color: hsl(240, 10%, 16%);
+  }
 }/*# sourceMappingURL=style.css.map */

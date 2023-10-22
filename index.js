@@ -4,6 +4,8 @@ const dropdownMenu = document.querySelectorAll('.dropdown');
 
 const menuIconOpen = 'images/icon-hamburger.svg';
 const menuIconClose = 'images/icon-close.svg';
+const arrowDark = 'images/icon-arrow-dark.svg';
+const arrowLight = 'images/icon-arrow-light.svg';
 
 const toggleMainMenu = () => {
   const isExpanded = btnToggle.getAttribute('aria-expanded') === 'true';
@@ -20,7 +22,7 @@ const toggleMainMenu = () => {
 
 const expandSubmenu = (itemSelector) => {
   const isExpanded = itemSelector.getAttribute('aria-expanded') === 'true';
-  const itemArrow = itemSelector.firstElementChild;
+  const itemArrow = itemSelector.querySelector('.arrow');
   const itemList = itemSelector.nextElementSibling;
 
   if (!isExpanded) {

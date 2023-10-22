@@ -27,7 +27,11 @@
           <button class="dropdown btn flex row justify-center align-center g-1" type="button" aria-expanded="false"
             aria-controls="productSubmenu">
             Product
-            <img class="arrow" src="images/icon-arrow-dark.svg" alt="">
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/icon-arrow-dark.svg">
+              <source media="(min-width: 768px)" srcset="images/icon-arrow-light.svg">
+              <img class="arrow" src="images/icon-arrow-dark.svg" alt="">
+            </picture>
           </button>
           <ul id="productSubmenu" class="submenu">
             <li>
@@ -62,7 +66,11 @@
           <button class="dropdown btn flex row justify-center align-center g-1" type="button" aria-expanded="false"
             aria-controls="companySubmenu" aria-expanded="false">
             Company
-            <img class="arrow" src="images/icon-arrow-dark.svg" alt="">
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/icon-arrow-dark.svg">
+              <source media="(min-width: 768px)" srcset="images/icon-arrow-light.svg">
+              <img class="arrow" src="images/icon-arrow-dark.svg" alt="">
+            </picture>
           </button>
           <ul id="companySubmenu" class="submenu">
             <li>
@@ -92,7 +100,11 @@
           <button class="dropdown btn flex row justify-center align-center g-1" type="button" aria-expanded="false"
             aria-controls="connectSubmenu" aria-expanded="false">
             Connect
-            <img class="arrow" src="images/icon-arrow-dark.svg" alt="">
+            <picture>
+              <source media="(max-width: 767px)" srcset="images/icon-arrow-dark.svg">
+              <source media="(min-width: 768px)" srcset="images/icon-arrow-light.svg">
+              <img class="arrow" src="images/icon-arrow-dark.svg" alt="">
+            </picture>
           </button>
           <ul id="connectSubmenu" class="submenu">
             <li>
@@ -130,8 +142,8 @@
   <main>
     <section class="hero flex column justify-center align-center">
       <picture>
-        <source media="(min-width: )" srcset="">
-        <source media="(min-width: )" srcset="">
+        <source media="(min-width: 992px)" srcset="images/bg-pattern-intro-desktop.svg">
+        <source media="(max-width: 991px)" srcset="images/bg-pattern-intro-mobile.svg">
         <img class="hero__img" src="images/bg-pattern-intro-mobile.svg" alt="">
       </picture>
       <div class="hero__img-layer"></div>
@@ -155,10 +167,14 @@
       <h2>
         Designed for the future
       </h2>
-      <div class="feature__content align-center">
-        <img src="images/illustration-editor-mobile.svg" alt="">
+      <div class="feature__content justify-center align-center">
+        <picture class="feature__content-image flex row justify-center">
+          <source media="(min-width: 992px)" srcset="images/illustration-editor-desktop.svg">
+          <source media="(max-width: 991px)" srcset="images/illustration-editor-mobile.svg">
+          <img src="images/illustration-editor-mobile.svg" alt="">
+        </picture>
 
-        <div class="flex column g-2">
+        <div class="feature__content-text flex column">
           <div class="flex column g-2">
             <h3>
               Introducing an extensible editor
@@ -190,43 +206,47 @@
       <div class="bottom-layer flex justify-center">
         <img src="images/bg-pattern-circles.svg" alt="">
       </div>
-      <div class="feature__content">
-        <h1>
-          State of the Art Infrastructure
-        </h1>
-        <p class="text-neutral-white">
-          With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
-          This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
-        </p>
+      <div class="feature__content flex justify-center align-center">
+        <div class="feature__content-text flex column g-2">
+          <h1>
+            State of the Art Infrastructure
+          </h1>
+          <p class="text-neutral-white">
+            With reliability and speed in mind, worldwide data centers provide the backbone for ultra-fast connectivity.
+            This ensures your site will load instantly, no matter where your readers are, keeping your site competitive.
+          </p>
+        </div>
       </div>
     </section>
 
     <section class="feature three">
       <img src="images/illustration-laptop-mobile.svg" alt="illustration of a laptop">
-      <div class="feature__content">
-        <div class="flex column g-2">
-          <h3>
-            Free, open, simple
-          </h3>
-          <p>
-            Blogr is a free and open source application backed by a large community of helpful developers. It supports
-            features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
-            tools,
-            and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
-          </p>
-        </div>
+      <div class="feature__content justify-center align-center">
+        <div class="feature__content-text flex column g-2">
+          <div class="flex column g-2">
+            <h3>
+              Free, open, simple
+            </h3>
+            <p>
+              Blogr is a free and open source application backed by a large community of helpful developers. It supports
+              features such as code syntax highlighting, RSS feeds, social media integration, third-party commenting
+              tools,
+              and works seamlessly with Google Analytics. The architecture is clean and is relatively easy to learn.
+            </p>
+          </div>
 
-        <div class="flex column g-2">
-          <h3>
-            Powerful tooling
-          </h3>
-          <p>
-            Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment
-            a
-            breeze,
-            but
-            capable of producing even the most complicated sites.
-          </p>
+          <div class="flex column g-2">
+            <h3>
+              Powerful tooling
+            </h3>
+            <p>
+              Batteries included. We built a simple and straightforward CLI tool that makes customization and deployment
+              a
+              breeze,
+              but
+              capable of producing even the most complicated sites.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -291,12 +311,12 @@
           </li>
         </ul>
       </div>
+      <div class="attribution flex column">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>
+        Coded by <a href="#">Hadree Mustaffa</a>
+      </div>
     </nav>
 
-    <div class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-      Coded by <a href="#">Hadree Mustaffa</a>.
-    </div>
   </footer>
 </body>
 
