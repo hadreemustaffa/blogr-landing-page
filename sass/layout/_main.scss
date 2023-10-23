@@ -53,9 +53,6 @@ main {
 
     &-text {
       max-width: 60ch;
-    }
-
-    > div {
       gap: 3rem;
     }
   }
@@ -101,25 +98,90 @@ main {
   }
 
   .feature {
-    // position: relative;
+    position: relative;
+    align-items: normal;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 8rem 2rem;
+    gap: 0;
+
     &__content {
-      padding: 5rem;
       flex-direction: row-reverse;
 
-      > div {
-        width: 50%;
+      &-text {
         text-align: left;
-      }
-      > picture {
-        position: absolute;
-        right: -22rem;
-        // transform: scale(0.85);
-        transition: all 0.25s ease;
+        max-width: 100ch;
       }
     }
 
     &.one {
-      > .feature__content {
+      h2 {
+        grid-area: 1 / 1 / 1 / span 2;
+      }
+
+      .feature__content {
+        padding: 5rem 0 10rem 10rem;
+        justify-content: start;
+
+        &-image {
+          position: absolute;
+          top: 0;
+          right: -22rem;
+          transform: scale(0.85);
+          transition: all 0.25s ease;
+        }
+
+        &-text {
+          grid-area: 2 / 1 / 2 / 1;
+        }
+      }
+    }
+
+    &.two {
+      margin-top: 0;
+      img.top-layer {
+        grid-area: 1 / 1 / 1 / 1;
+        max-width: none;
+        top: -12rem;
+        left: clamp(0rem, -13.0597rem + 16.7164vw, 7rem);
+        z-index: 1;
+      }
+      .bottom-layer {
+        img {
+          max-width: none;
+          top: -33rem;
+          left: -15%;
+          z-index: 0;
+        }
+      }
+
+      .feature__content {
+        padding-top: 0;
+        grid-area: 1 / 2 / 1 / 2;
+      }
+    }
+
+    &.three {
+      position: relative;
+      flex-direction: row;
+
+      img {
+        position: absolute;
+        top: 20%;
+        left: -2%;
+        transform: scale(1.75);
+        transition: all 0.25s ease;
+      }
+      .feature__content {
+        grid-area: 1 / 2 / 1 / 2;
+      }
+    }
+
+    &.two,
+    &.three {
+      .feature__content {
+        padding: 0 10rem 0 5rem;
         justify-content: start;
       }
     }
@@ -129,8 +191,27 @@ main {
 @include xl {
   .feature {
     &__content {
+      &-text {
+        max-width: 50ch;
+      }
+
       > picture {
         right: -20rem;
+      }
+    }
+
+    &.three {
+      margin: 10rem 0;
+      img {
+        transform: scale(2);
+      }
+    }
+
+    &.two,
+    &.three {
+      .feature__content {
+        padding: 0 10rem 0 0;
+        justify-content: start;
       }
     }
   }

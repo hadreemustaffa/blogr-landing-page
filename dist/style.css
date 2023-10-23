@@ -400,8 +400,6 @@ main {
 }
 .feature__content-text {
   max-width: 60ch;
-}
-.feature__content > div {
   gap: 3rem;
 }
 .feature.two {
@@ -439,26 +437,94 @@ main {
   .hero__img {
     transform: scale(2.25) translate(11%, -8%);
   }
+  .feature {
+    position: relative;
+    align-items: normal;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    padding: 8rem 2rem;
+    gap: 0;
+  }
   .feature__content {
-    padding: 5rem;
     flex-direction: row-reverse;
   }
-  .feature__content > div {
-    width: 50%;
+  .feature__content-text {
     text-align: left;
+    max-width: 100ch;
   }
-  .feature__content > picture {
+  .feature.one h2 {
+    grid-area: 1/1/1/span 2;
+  }
+  .feature.one .feature__content {
+    padding: 5rem 0 10rem 10rem;
+    justify-content: start;
+  }
+  .feature.one .feature__content-image {
     position: absolute;
+    top: 0;
     right: -22rem;
+    transform: scale(0.85);
     transition: all 0.25s ease;
   }
-  .feature.one > .feature__content {
+  .feature.one .feature__content-text {
+    grid-area: 2/1/2/1;
+  }
+  .feature.two {
+    margin-top: 0;
+  }
+  .feature.two img.top-layer {
+    grid-area: 1/1/1/1;
+    max-width: none;
+    top: -12rem;
+    left: clamp(0rem, -13.0597rem + 16.7164vw, 7rem);
+    z-index: 1;
+  }
+  .feature.two .bottom-layer img {
+    max-width: none;
+    top: -33rem;
+    left: -15%;
+    z-index: 0;
+  }
+  .feature.two .feature__content {
+    padding-top: 0;
+    grid-area: 1/2/1/2;
+  }
+  .feature.three {
+    position: relative;
+    flex-direction: row;
+  }
+  .feature.three img {
+    position: absolute;
+    top: 20%;
+    left: -2%;
+    transform: scale(1.75);
+    transition: all 0.25s ease;
+  }
+  .feature.three .feature__content {
+    grid-area: 1/2/1/2;
+  }
+  .feature.two .feature__content, .feature.three .feature__content {
+    padding: 0 10rem 0 5rem;
     justify-content: start;
   }
 }
 @media (min-width: 78rem) {
+  .feature__content-text {
+    max-width: 50ch;
+  }
   .feature__content > picture {
     right: -20rem;
+  }
+  .feature.three {
+    margin: 10rem 0;
+  }
+  .feature.three img {
+    transform: scale(2);
+  }
+  .feature.two .feature__content, .feature.three .feature__content {
+    padding: 0 10rem 0 0;
+    justify-content: start;
   }
 }
 footer {
@@ -491,13 +557,16 @@ footer .list-container > p {
     align-items: start;
     text-align: left;
   }
-  nav {
+  footer nav {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     padding-bottom: 0;
   }
-  nav .list-container ul {
+  footer nav .list-container {
+    padding-bottom: 0;
+  }
+  footer nav .list-container ul {
     gap: 1rem;
   }
 }

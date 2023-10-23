@@ -33,15 +33,19 @@ footer {
     padding: 4rem 10rem;
     align-items: start;
     text-align: left;
-  }
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-bottom: 0;
 
-    .list-container ul {
-      gap: 1rem;
+    nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: 0;
+
+      .list-container {
+        padding-bottom: 0;
+      }
+      .list-container ul {
+        gap: 1rem;
+      }
     }
   }
 }
