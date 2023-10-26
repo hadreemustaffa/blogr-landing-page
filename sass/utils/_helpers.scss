@@ -124,5 +124,6 @@
   }
   .active + ul {
     color: $clr-neutral-accent-bg;
+    display: flex;
   }
 }

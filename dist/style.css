@@ -718,5 +718,6 @@ footer .list-container > p {
   }
   .active + ul {
     color: hsl(240, 10%, 16%);
+    display: flex;
   }
 }/*# sourceMappingURL=style.css.map */
