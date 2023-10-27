@@ -117,6 +117,14 @@
   color: hsl(207, 13%, 45%);
 }
 
+.active picture .arrow {
+  transform: rotate(180deg);
+}
+
+.active + ul {
+  display: flex;
+}
+
 @include lg {
   .active {
     color: $clr-neutral-white;
@@ -124,6 +132,5 @@
   }
   .active + ul {
     color: $clr-neutral-accent-bg;
-    display: flex;
   }
 }

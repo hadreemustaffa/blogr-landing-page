@@ -124,6 +124,9 @@ a {
   text-decoration: none;
   font-weight: 600;
 }
+a:focus-visible {
+  outline: 2px solid hsl(240, 10%, 16%);
+}
 
 button {
   font-weight: 600;
@@ -147,6 +150,9 @@ footer a {
 }
 footer a:hover {
   text-decoration: underline;
+}
+footer a:focus-visible {
+  outline: 2px solid hsl(0, 0%, 100%);
 }
 
 .hero {
@@ -711,6 +717,14 @@ footer .list-container > p {
   color: hsl(207, 13%, 45%);
 }
 
+.active picture .arrow {
+  transform: rotate(180deg);
+}
+
+.active + ul {
+  display: flex;
+}
+
 @media (min-width: 62rem) {
   .active {
     color: hsl(0, 0%, 100%);
@@ -718,6 +732,5 @@ footer .list-container > p {
   }
   .active + ul {
     color: hsl(240, 10%, 16%);
-    display: flex;
   }
 }/*# sourceMappingURL=style.css.map */
