@@ -47,12 +47,11 @@ nav {
 }
 
 footer {
-  .list-container {
-    p {
-      color: $clr-neutral-white;
-      font-weight: 600;
-    }
+  p {
+    color: $clr-neutral-white;
+    font-weight: 600;
   }
+
   a {
     color: $clr-neutral-accent-text;
     font-weight: 500;

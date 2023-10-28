@@ -34,6 +34,12 @@ footer {
     align-items: start;
     text-align: left;
 
+    .logo {
+      width: 100px;
+      height: 40px;
+      padding-bottom: 0;
+    }
+
     nav {
       display: flex;
       flex-direction: row;

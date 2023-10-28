@@ -11,6 +11,11 @@ header {
   align-items: center;
   padding: 3.125rem 1.5rem 0;
   z-index: 50;
+
+  .logo {
+    width: 100px;
+    height: 40px;
+  }
 }
 
 nav {
@@ -42,6 +47,8 @@ nav {
     position: relative;
 
     .arrow {
+      width: 10px;
+      height: 6px;
       transition: transform 0.25s ease;
     }
     ul {
@@ -60,7 +67,7 @@ nav {
 @include lg {
   header {
     justify-content: start;
-    padding: 3.125rem 8rem 0;
+    padding: 3.125rem 9rem 0;
   }
 
   nav {
