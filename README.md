@@ -23,7 +23,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: [Frontend Mentor](https://www.frontendmentor.io/solutions/blogr-landing-page-using-flex-grid-and-vanilla-js-_Sp6_dyo-i)
 - Live Site URL: [Github Pages](https://hadreemustaffa.github.io/blogr-landing-page/)
 
 ## My process
