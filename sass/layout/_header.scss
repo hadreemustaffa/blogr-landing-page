@@ -97,32 +97,33 @@ nav {
       box-shadow: none;
       padding: 0 0 0 2rem;
       margin: 0;
-    }
 
-    li {
-      position: relative;
-      ul {
-        margin: 0;
-        box-shadow: 0 0 30px -15px $clr-bg-body-1;
-        position: absolute;
-        top: 3rem;
-        text-align: left;
-        padding: 2rem 4rem 2rem 1.75rem;
-      }
+      li {
+        position: relative;
 
-      &:first-child {
         ul {
-          left: -3.75rem;
+          margin: 0;
+          box-shadow: 0 0 30px -15px $clr-bg-body-1;
+          position: absolute;
+          top: 3rem;
+          text-align: left;
+          padding: 2rem 4rem 2rem 1.75rem;
         }
-      }
-      &:nth-child(2) {
-        ul {
-          left: -1rem;
+
+        &:first-child {
+          ul {
+            left: -3.75rem;
+          }
         }
-      }
-      &:nth-child(3) {
-        ul {
-          left: -0.25rem;
+        &:nth-child(2) {
+          ul {
+            left: -1rem;
+          }
+        }
+        &:nth-child(3) {
+          ul {
+            left: -0.25rem;
+          }
         }
       }
     }

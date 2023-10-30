@@ -64,6 +64,16 @@ nav {
 }
 
 @include lg {
+  .btn {
+    &:hover {
+      transition: all 0.15s ease;
+    }
+  }
+
+  .btn-primary {
+    box-shadow: 0 0 30px -15px $clr-bg-body-1;
+  }
+
   .btn-tertiary {
     color: $clr-primary-cta-text;
     background: $clr-neutral-white;

@@ -236,6 +236,12 @@ nav button.btn {
 }
 
 @media (min-width: 62rem) {
+  .btn:hover {
+    transition: all 0.15s ease;
+  }
+  .btn-primary {
+    box-shadow: 0 0 30px -15px hsl(237, 17%, 21%);
+  }
   .btn-tertiary {
     color: hsl(356, 100%, 66%);
     background: hsl(0, 0%, 100%);
@@ -338,10 +344,10 @@ nav li ul {
     padding: 0 0 0 2rem;
     margin: 0;
   }
-  nav li {
+  nav .main-menu li {
     position: relative;
   }
-  nav li ul {
+  nav .main-menu li ul {
     margin: 0;
     box-shadow: 0 0 30px -15px hsl(237, 17%, 21%);
     position: absolute;
@@ -349,13 +355,13 @@ nav li ul {
     text-align: left;
     padding: 2rem 4rem 2rem 1.75rem;
   }
-  nav li:first-child ul {
+  nav .main-menu li:first-child ul {
     left: -3.75rem;
   }
-  nav li:nth-child(2) ul {
+  nav .main-menu li:nth-child(2) ul {
     left: -1rem;
   }
-  nav li:nth-child(3) ul {
+  nav .main-menu li:nth-child(3) ul {
     left: -0.25rem;
   }
 }
@@ -570,7 +576,7 @@ footer .list-container > p {
 
 @media (min-width: 62rem) {
   footer {
-    padding: 4rem 10rem;
+    padding: 4rem 9rem;
     align-items: start;
     text-align: left;
   }
