@@ -5,6 +5,7 @@ body {
   font-weight: 300;
   font-size: $fs-body-1;
   color: $clr-neutral-body;
+  line-height: 1.75;
 }
 
 h1 {
@@ -16,6 +17,12 @@ h1 {
 h2 {
   font-weight: 600;
   font-size: $fs-heading-2;
+  color: $clr-primary-headings;
+}
+
+h3 {
+  font-weight: 600;
+  font-size: $fs-heading-3;
   color: $clr-primary-headings;
 }
 
@@ -31,6 +38,10 @@ a {
 
 button {
   font-weight: 600;
+}
+
+.btn-primary {
+  font-weight: $fw-bold;
 }
 
 nav {

@@ -105,17 +105,24 @@ body {
   font-weight: 300;
   font-size: 1rem;
   color: hsl(207, 13%, 34%);
+  line-height: 1.75;
 }
 
 h1 {
   font-weight: 700;
-  font-size: clamp(1.75rem, 1.25rem + 2.5vw, 3.5rem);
+  font-size: clamp(1.75rem, 0.8929rem + 3.6571vw, 3.75rem);
   color: hsl(0, 0%, 100%);
 }
 
 h2 {
   font-weight: 600;
-  font-size: clamp(1.5rem, 1.3214rem + 0.8929vw, 2.125rem);
+  font-size: clamp(1.75rem, 1.4821rem + 1.1429vw, 2.375rem);
+  color: hsl(208, 49%, 24%);
+}
+
+h3 {
+  font-weight: 600;
+  font-size: clamp(1.25rem, 1.0357rem + 0.9143vw, 1.75rem);
   color: hsl(208, 49%, 24%);
 }
 
@@ -130,6 +137,10 @@ a:focus-visible {
 
 button {
   font-weight: 600;
+}
+
+.btn-primary {
+  font-weight: 700;
 }
 
 nav button {
@@ -227,7 +238,7 @@ footer a:focus-visible {
   background-color: transparent;
 }
 .btn-toggle img {
-  width: 32px;
+  width: 26px;
   height: 18px;
 }
 
@@ -242,18 +253,15 @@ nav button.btn {
   .btn-primary {
     box-shadow: 0 0 30px -15px hsl(237, 17%, 21%);
   }
-  .btn-tertiary {
-    color: hsl(356, 100%, 66%);
-    background: hsl(0, 0%, 100%);
-  }
-  .btn-tertiary:hover {
-    color: hsl(0, 0%, 100%);
+  .cta {
+    display: block;
+    width: 135px;
   }
 }
 body {
   display: flex;
   flex-direction: column;
-  background-color: hsl(0, 0%, 100%);
+  background-color: hsl(0, 0%, 95%);
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -375,7 +383,7 @@ main {
 
 .hero {
   width: 100%;
-  height: 80vh;
+  height: 70vh;
   border-radius: 0 0 0 5rem;
   overflow: hidden;
   position: relative;
@@ -454,7 +462,7 @@ main {
 
 @media (min-width: 62rem) {
   .hero__img {
-    transform: scale(2.25) translate(11%, -8%);
+    transform: scale(2.25) translate(12%, -15%);
   }
   .feature {
     position: relative;
@@ -530,7 +538,7 @@ main {
 }
 @media (min-width: 78rem) {
   .feature__content-text {
-    max-width: 50ch;
+    max-width: 55ch;
   }
   .feature__content > picture {
     right: -20rem;
@@ -655,11 +663,11 @@ footer .list-container > p {
 }
 
 .fs-xl {
-  font-size: clamp(1.75rem, 1.25rem + 2.5vw, 3.5rem);
+  font-size: clamp(1.75rem, 1.4821rem + 1.1429vw, 2.375rem);
 }
 
 .fs-lg {
-  font-size: clamp(1.5rem, 1.3214rem + 0.8929vw, 2.125rem);
+  font-size: clamp(1.25rem, 1.0357rem + 0.9143vw, 1.75rem);
 }
 
 .fs-md {

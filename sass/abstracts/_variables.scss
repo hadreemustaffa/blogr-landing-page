@@ -1,8 +1,9 @@
 $ff-primary: "Overpass", sans-serif;
 $ff-secondary: "Ubuntu", sans-serif;
 
-$fs-xl: clamp(1.75rem, 1.25rem + 2.5vw, 3.5rem);
-$fs-lg: clamp(1.5rem, 1.3214rem + 0.8929vw, 2.125rem);
+$fs-xxl: clamp(1.75rem, 0.8929rem + 3.6571vw, 3.75rem);
+$fs-xl: clamp(1.75rem, 1.4821rem + 1.1429vw, 2.375rem);
+$fs-lg: clamp(1.25rem, 1.0357rem + 0.9143vw, 1.75rem);
 $fs-md: 1rem;
 $fs-sm: clamp(0.75rem, 0.6786rem + 0.3571vw, 1rem);
 
@@ -16,7 +17,8 @@ $ff-heading: $ff-primary;
 $ff-primary-body: $ff-primary;
 $ff-secondary-body: $ff-secondary;
 
-$fs-heading-1: $fs-xl;
-$fs-heading-2: $fs-lg;
+$fs-heading-1: $fs-xxl;
+$fs-heading-2: $fs-xl;
+$fs-heading-3: $fs-lg;
 $fs-body-1: $fs-md;
 $fs-body-2: $fs-sm;

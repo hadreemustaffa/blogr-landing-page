@@ -52,7 +52,7 @@
   background-color: transparent;
 
   img {
-    width: 32px;
+    width: 26px;
     height: 18px;
   }
 }
@@ -74,11 +74,8 @@ nav {
     box-shadow: 0 0 30px -15px $clr-bg-body-1;
   }
 
-  .btn-tertiary {
-    color: $clr-primary-cta-text;
-    background: $clr-neutral-white;
-    &:hover {
-      color: $clr-neutral-white;
-    }
+  .cta {
+    display: block;
+    width: 135px;
   }
 }
